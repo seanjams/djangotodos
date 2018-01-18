@@ -1,0 +1,12 @@
+{% include 'partials/header.html' %}
+<form action="{% url 'add' %}" method="post">
+  {% csrf_token %}
+  <label for="title">Title</label>
+  <input type="text" name="title" />
+  <br>
+  <label for="text">Text</label>
+  <textarea name="text"></textarea>
+  <input type="submit" value="Submit" />
+</form>
+<a href="/todos">Go Back</a>
+{% include 'partials/footer.html' %}
